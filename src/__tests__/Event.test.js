@@ -51,15 +51,15 @@ beforeAll(() => {
 })
 
 test("Render event title", () => {
-  expect(EventWrapper.find(".summary")).toHaveLength(1);
+  expect(EventWrapper.find(".name")).toHaveLength(1);
 })
 
 test("Render dateTime of the event", () => {
   expect(EventWrapper.find(".dateTime")).toHaveLength(1);
 })
 
-test("Render place of the envet", () => {
-  expect(EventWrapper.find(".location")).toHaveLength(1);
+test("Render place of the event", () => {
+  expect(EventWrapper.find(".locations")).toHaveLength(1);
 })
 
 test("Render 'seeMore' button", () => {
