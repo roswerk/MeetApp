@@ -17,10 +17,10 @@ class Event extends Component{
 
   render(){
     const {event} = this.props;
-    return (<div>
-      <h1 className="summary"></h1>
-      <p className="dateTime"></p>
-      <p className="location"></p>
+    return (<div className="event">
+      <h1 className="name">{event.summary}</h1>
+      <p className="dateTime">{event.start.dateTime + " " + event.start.timeZone}</p>
+      <p className="locations">{event.location}</p>
 
       {this.state.showHideDetails && (
         <div className="event-details">
