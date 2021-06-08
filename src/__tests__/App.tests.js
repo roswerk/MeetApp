@@ -77,5 +77,32 @@ describe("<App /> integration",() => {
 });
 
 
+test("App passes 'numberOfEvents' state as a prop to 'NumberOfEvents' component", () => {
+  const AppWrapper = mount(<App />);
+  const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
+  expect(AppNumberOfEventsState).not.toEqual(undefined);
+  expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(
+    AppNumberOfEventsState,
+  );
+  AppWrapper.unmount();
+});
+
+test("App should render a number of 32 events by default", () => {
+  const AppWrapper = mount(<App />);
+  const numberOfEventsItems = AppWrapper.find(NumberOfEvents).find('.event-number-input',);
+  expect(numberOfEventsItems.props().value).toEqual(32);
+  AppWrapper.unmount();
+});
+
+
+test("App should change number of events when 'NumberOfEvents' component changes from 32 to 14", async () => {
+  const AppWrapper = mount(<App />);
+  const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+  const locations = extractLocations(mockData);
+  NumberOfEventsWrapper.setState({ events: locations, eventCount: 14 });
+  NumberOfEventsWrapper.find('.event-number-input').simulate('change');
+  expect(NumberOfEventsWrapper.state('eventCount')).toEqual(14);
+  AppWrapper.unmount();
+});
 
 });
