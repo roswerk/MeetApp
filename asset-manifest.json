@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MeetApp/static/css/main.24a55296.chunk.css",
-    "main.js": "/MeetApp/static/js/main.a92037d2.chunk.js",
-    "main.js.map": "/MeetApp/static/js/main.a92037d2.chunk.js.map",
+    "main.css": "/MeetApp/static/css/main.ab282512.chunk.css",
+    "main.js": "/MeetApp/static/js/main.0948e5d9.chunk.js",
+    "main.js.map": "/MeetApp/static/js/main.0948e5d9.chunk.js.map",
     "runtime-main.js": "/MeetApp/static/js/runtime-main.2b4651a6.js",
     "runtime-main.js.map": "/MeetApp/static/js/runtime-main.2b4651a6.js.map",
     "static/js/2.b4cbc305.chunk.js": "/MeetApp/static/js/2.b4cbc305.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/MeetApp/index.html",
     "service-worker.js": "/MeetApp/service-worker.js",
     "service-worker.js.map": "/MeetApp/service-worker.js.map",
-    "static/css/main.24a55296.chunk.css.map": "/MeetApp/static/css/main.24a55296.chunk.css.map",
+    "static/css/main.ab282512.chunk.css.map": "/MeetApp/static/css/main.ab282512.chunk.css.map",
     "static/js/2.b4cbc305.chunk.js.LICENSE.txt": "/MeetApp/static/js/2.b4cbc305.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2b4651a6.js",
     "static/js/2.b4cbc305.chunk.js",
-    "static/css/main.24a55296.chunk.css",
-    "static/js/main.a92037d2.chunk.js"
+    "static/css/main.ab282512.chunk.css",
+    "static/js/main.0948e5d9.chunk.js"
   ]
 }
