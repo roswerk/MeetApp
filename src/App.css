@@ -2,10 +2,16 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-color: grey;
 }
 
 .App * {
   box-sizing: border-box;
+  color: white;
+}
+
+.welcome-title{
+  color: rgb(197, 236, 125)
 }
 
 ul {
@@ -34,6 +40,7 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
+  color: black;
 }
 
 .city {
@@ -47,6 +54,7 @@ input[type="number"] {
   max-width: 300px;
   margin: auto;
   position: relative;
+  margin-top: 50px;
 }
 
 .suggestions {
@@ -65,15 +73,18 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   background-color: #eee;
   cursor: default;
+  color: black;
 }
 
 .suggestions > li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: rgb(197, 236, 125);
+  color: black;
 }
 
 .event {
@@ -95,9 +106,14 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.seeAllCities{
+  color: black;
+}
+
 .name {
   font-size: 18px;
   font-weight: 600;
+  color: rgb(197, 236, 125)
 }
 
 .group-name {
@@ -117,6 +133,7 @@ input[type="number"] {
 .numberOfEvents {
   width: 200px;
   margin: 20px auto;
+  margin-left: 5px;
   text-align: center;
 }
 
@@ -157,6 +174,11 @@ input[type="number"] {
   transition: all 0.4s ease 0s;
   min-width: 10rem;
   margin: 1rem;
+}
+
+.seeMore-btn{
+  border: solid 2px rgb(197, 236, 125);
+  color: black;
 }
 
 .google-btn {
