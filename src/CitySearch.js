@@ -62,8 +62,8 @@ handleItemClicked = (suggestion) => {
             {this.state.suggestions.map((suggestion) => (
             <li key={suggestion} onClick={() => this.handleItemClicked(suggestion)}>{suggestion}</li>
               ))}
-            <li key={'all'} onClick={() => this.handleItemClicked('all')}>
-            <b>See all cities</b>
+            <li key={"all"} onClick={() => this.handleItemClicked("all")}>
+            <b className="seeAllCities">See all cities</b>
             </li>
           </ul>
       </div>
