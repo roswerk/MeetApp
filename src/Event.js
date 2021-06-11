@@ -9,7 +9,7 @@ class Event extends Component{
 
   handleShowHideButton = () => {
     if(this.state.showHideDetails === true){
-      this.setState({showHidenDetails: false})
+      this.setState({showHideDetails: false})
     } else{
       this.setState({showHideDetails: true});
     };
