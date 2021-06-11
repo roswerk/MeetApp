@@ -63,7 +63,7 @@ class App extends Component{
       <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
       <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
       <EventList events={this.state.events} />
-
+      <footer>MeetApp 2021</footer>
       </div>
     );
   }
