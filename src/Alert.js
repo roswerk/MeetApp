@@ -12,7 +12,7 @@ class Alert extends Component {
       color: this.color,
       fontWeight: "bold",
       fontStyle: "italic",
-      backgroundColor: "gainsboro",
+      backgroundColor: "white",
       borderRadius: this.borderRadius,
       fontSize: "10px"
     };
