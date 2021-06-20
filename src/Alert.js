@@ -1,3 +1,4 @@
+// import { SummaryReporter } from "@jest/reporters";
 import { getWhitelistUrls } from "atatus-spa";
 import React, { Component } from "react";
 
@@ -43,5 +44,12 @@ class ErrorAlert extends Alert{
   }
 };
 
+class OfflineAlert extends Alert{
+  constructor(props){
+    super(props);
+    this.color = "white";
+  }
+}
 
-export {InfoAlert, ErrorAlert};
+
+export {InfoAlert, ErrorAlert ,OfflineAlert};
