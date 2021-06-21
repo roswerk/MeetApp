@@ -6,7 +6,7 @@ import NumberOfEvents from './NumberOfEvents';
 import {getEvents, extractLocations} from "./api"
 import "./nprogress.css";
 import { OfflineAlert } from './Alert';
-import { toThrowErrorMatchingInlineSnapshot } from 'jest-snapshot';
+// import { toThrowErrorMatchingInlineSnapshot } from 'jest-snapshot';
 
 
 class App extends Component{
@@ -37,7 +37,7 @@ class App extends Component{
 
       if(!navigator.onLine){
         this.setState({
-          offlineText: "You're currently offline. You might see outdated data. Please connect to the internet to see new data"
+          offlineText: "You're currently offline. You might see outdated data. Please connect to the internet in order to have the best experience."
         })
       }
       else{
