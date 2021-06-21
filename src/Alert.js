@@ -1,5 +1,5 @@
 // import { SummaryReporter } from "@jest/reporters";
-import { getWhitelistUrls } from "atatus-spa";
+// import { getWhitelistUrls } from "atatus-spa";
 import React, { Component } from "react";
 
 class Alert extends Component {
@@ -13,9 +13,9 @@ class Alert extends Component {
       color: this.color,
       fontWeight: "bold",
       fontStyle: "italic",
-      backgroundColor: "white",
+      backgroundColor: this.backgroundColor,
       borderRadius: this.borderRadius,
-      fontSize: "10px"
+      fontSize: this.fontSize
     };
   };
 
@@ -33,6 +33,9 @@ class InfoAlert extends Alert{
     super(props);
     this.color = "blue";
     this.borderRadius = "40px 5px";
+    this.backgroundColor = "white";
+    this.fontWeight = "bold";
+    this.fontSize = "10px";
   }
 };
 
@@ -41,13 +44,17 @@ class ErrorAlert extends Alert{
     super(props);
     this.color = "orangered";
     this.borderRadius = "5px 40px";
+    this.backgroundColor = "white";
+    this.fontSize = "10px";
   }
 };
 
 class OfflineAlert extends Alert{
   constructor(props){
     super(props);
-    this.color = "white";
+    this.color = "yellow";
+    this.backgroundColor = "grey";
+    this.fontSize = "20px";
   }
 }
 
