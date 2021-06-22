@@ -3,13 +3,12 @@ import './App.css';
 import EventList from "./EventList";
 import CitySearch from "./CitySearch"; 
 import NumberOfEvents from './NumberOfEvents';
-import {getEvents, extractLocations} from "./api"
+import {getEvents, extractLocations, checkToken, getAccessToken} from "./api"
 import "./nprogress.css";
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
-import {checkToken, getAccessToken } from
-'./api';
 // import { toThrowErrorMatchingInlineSnapshot } from 'jest-snapshot';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 
 class App extends Component{
@@ -97,7 +96,7 @@ class App extends Component{
 
 
   render(){
-    
+
     // if (this.state.showWelcomeScreen === undefined) return <div
     // className="App" />
 
@@ -108,6 +107,20 @@ class App extends Component{
       <OfflineAlert text={this.state.offlineText} />
       <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
       <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
+
+      <h4>Events in each city</h4>
+
+      <ScatterChart width={400} height={400} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+      <CartesianGrid />
+      <XAxis dataKey="city" type="category" name="city" />
+      <YAxis dataKey="number" type="number" name="number of events" allowDecimals={false}/>
+      
+      <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+      <Legend />
+      <Scatter data={this.getData()} fill="#8884d8" />
+      {/* <Scatter data={this.getData()} fill="#82ca9d" /> */}
+      </ScatterChart>
+
       <EventList events={this.state.events} />
       <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}getAccessToken={() => { getAccessToken() }} />
       <footer>MeetApp 2021</footer>
