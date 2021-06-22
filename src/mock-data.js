@@ -77,19 +77,10 @@ const mockData = [
   //   "useDefault": true
   //  },
   //  "eventType": "default"
-  // }]
+  // }
+// ]
   
-  {
-    "kind": "calendar#events",
-    "etag": "\"p3308h454qfgum0g\"",
-    "summary": "fullstackwebdev@careerfoundry.com",
-    "updated": "2020-09-11T17:42:14.056Z",
-    "timeZone": "Europe/Berlin",
-    "accessRole": "reader",
-    "defaultReminders": [],
-    "nextPageToken": "EjYKKzZjbzBvamwwbDBqMHJiaDNnNTZ2bGMyczlpXzIwMjAwODEyVDAxMDAwMFoYgNikkdaU6wIiBwgFEJLGkxY=",
-    "items": [
-     {
+{
       "kind": "calendar#event",
       "etag": "\"3181161784712000\"",
       "id": "4eahs9ghkhrvkld72hogu9ph3e_20200519T140000Z",
@@ -517,7 +508,6 @@ const mockData = [
        "useDefault": true
       },
       "eventType": "default"
-     }]
-    }];
+     }];
 
   export {mockData};
