@@ -96,12 +96,14 @@ class App extends Component{
   getData = () => {
     const {locations, events} = this.state;
     const data = locations.map((location) => {
-      if (true){
-        console.log(location);
-        console.log("Its prop undefined")
-      }
+      
+        
+
         const number = events.filter((event) => event.location === location).length
         const city = location.split(", ").shift();
+        console.log(location);
+        console.log(city)
+        console.log(number)
         return {city, number}
     })
     return data
@@ -123,8 +125,8 @@ class App extends Component{
       <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
 
       <h4>Events in each city</h4>
-
-      <ScatterChart width={400} height={400} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+      <ResponsiveContainer height={400}>
+      <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
       <CartesianGrid />
       <XAxis dataKey="city" type="category" name="city" />
       <YAxis dataKey="number" type="number" name="number of events" allowDecimals={false}/>
@@ -132,8 +134,8 @@ class App extends Component{
       <Tooltip cursor={{ strokeDasharray: '3 3' }} />
       <Legend />
       <Scatter data={this.getData()} fill="#8884d8" />
-      {/* <Scatter data={this.getData()} fill="#82ca9d" /> */}
       </ScatterChart>
+      </ResponsiveContainer>
 
       <EventList events={this.state.events} />
       <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}getAccessToken={() => { getAccessToken() }} />
