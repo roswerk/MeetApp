@@ -31,21 +31,20 @@ class Alert extends Component {
 class InfoAlert extends Alert{
   constructor(props){
     super(props);
-    this.color = "blue";
-    this.borderRadius = "40px 5px";
-    this.backgroundColor = "white";
+    this.color = "white";
     this.fontWeight = "bold";
     this.fontSize = "10px";
+    this.backgroundColor = "red";
   }
 };
 
 class ErrorAlert extends Alert{
   constructor(props){
     super(props);
-    this.color = "orangered";
-    this.borderRadius = "5px 40px";
-    this.backgroundColor = "white";
+    this.color = "white";
     this.fontSize = "10px";
+    this.fontWeight = "bold";
+    this.backgroundColor = "red";
   }
 };
 
