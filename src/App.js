@@ -118,17 +118,25 @@ class App extends Component{
 
     return (
       <div className="App">
+      <div>
       <h1 className="welcome-title">Welcome to MeetApp</h1>
       <p>The only place to get the information you need about Events in your city</p>
       <OfflineAlert text={this.state.offlineText} />
-      <CitySearch locations={locations} updateEvents={this.updateEvents} />
-      <NumberOfEvents numberOfEvents={numberOfEvents} updateEvents={this.updateEvents} />
+      </div>  
 
       <h4>Events in each city</h4>
-
+      <div className="wrapper">
       <div className="data-vis-wrapper">
-      <EventGenre events={events} />
+      
+      
       <ResponsiveContainer height={400}>
+      <EventGenre events={events} />
+      </ResponsiveContainer>
+      
+
+      
+      <ResponsiveContainer height={400}>
+        
       <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
       <CartesianGrid />
       <XAxis dataKey="city" type="category" name="city" />
@@ -139,11 +147,18 @@ class App extends Component{
       <Scatter data={this.getData()} fill="#8884d8" />
       </ScatterChart>
       </ResponsiveContainer>
+      
 
       </div>
 
+      <div className="eventList">
+      <CitySearch locations={locations} updateEvents={this.updateEvents} />
+      <NumberOfEvents numberOfEvents={numberOfEvents} updateEvents={this.updateEvents} />
       <EventList events={this.state.events} />
-      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}getAccessToken={() => { getAccessToken() }} />
+      </div>
+
+      </div>
+      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       <footer>MeetApp 2021</footer>
       </div>
     );

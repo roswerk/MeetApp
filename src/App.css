@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -10,7 +11,7 @@
   color: white;
 }
 
-.welcome-title{
+.welcome-title {
   color: rgb(197, 236, 125)
 }
 
@@ -26,6 +27,7 @@ p {
 .display-none {
   display: none;
 }
+
 .showSuggestions {
   display: block;
 }
@@ -68,7 +70,7 @@ input[type="number"] {
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
-.suggestions > li {
+.suggestions>li {
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #eee;
@@ -76,13 +78,13 @@ input[type="number"] {
   color: black;
 }
 
-.suggestions > li:last-child {
+.suggestions>li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  
+
 }
 
-.suggestions > li:hover {
+.suggestions>li:hover {
   background-color: rgb(197, 236, 125);
   color: black;
 }
@@ -106,7 +108,7 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.seeAllCities{
+.seeAllCities {
   color: black;
 }
 
@@ -131,10 +133,12 @@ input[type="number"] {
 }
 
 .numberOfEvents {
-  width: 200px;
-  margin: 20px auto;
-  margin-left: 5px;
-  text-align: center;
+  width: 30%;
+  /* margin-left: 72%; */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  margin-top: 5%;
 }
 
 .button-wrapper {
@@ -149,9 +153,12 @@ input[type="number"] {
   top: 20px;
   text-align: left;
   margin-left: 25px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin-top: 3%;
 }
 
-.Alert-text{
+.Alert-text {
   padding-left: 20px;
 }
 
@@ -160,10 +167,12 @@ input[type="number"] {
   align-items: center;
   flex-direction: column;
 }
+
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
+
 .recharts-surface {
   overflow: visible;
 }
@@ -181,7 +190,7 @@ input[type="number"] {
   margin: 1rem;
 }
 
-.seeMore-btn{
+.seeMore-btn {
   border: solid 2px rgb(197, 236, 125);
   color: black;
 }
@@ -194,12 +203,15 @@ input[type="number"] {
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
 .google-btn:hover {
   box-shadow: 0 0 6px #4285f4;
 }
+
 .google-btn:active {
   background: #1669f2;
 }
+
 .google-icon-wrapper {
   position: absolute;
   margin-top: 1px;
@@ -209,6 +221,7 @@ input[type="number"] {
   border-radius: 2px;
   background-color: #fff;
 }
+
 .google-icon {
   position: absolute;
   margin-top: 11px;
@@ -216,6 +229,7 @@ input[type="number"] {
   width: 18px;
   height: 18px;
 }
+
 .btn-text {
   float: right;
   margin: 11px 11px 0 0;
@@ -231,10 +245,25 @@ input[type="number"] {
   .data-vis-wrapper {
     flex-direction: row;
   }
+
   .data-vis-wrapper .recharts-responsive-container {
     flex-basis: 50%;
     max-width: 50%;
     min-width: auto;
     margin: 0 auto;
   }
+}
+
+/* .data-vis-wrapper {
+  grid-row-start: 1;
+  grid-row-end: 3;
+} */
+
+.eventList {
+  display: grid;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
 }
