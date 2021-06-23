@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {ErrorAlert} from "./Alert";
-
+import "./NumberOfEvents.css";
 
 class NumberOfEvents extends Component {
   state = {
@@ -35,15 +35,15 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="numberOfEvents">
-        <label htmlFor="numberOfEvent">Number of Events</label>
+        <ErrorAlert className="errorAlert"text={this.state.errorText} />
+        <label htmlFor="numberOfEvent" className="numberOfEventsLabel">Number of Events</label>
         <input
           className="event-number-input"
-          placeholder="Enter Number of Events to display"
+          placeholder="1-32"
           type="number"
           value={this.state.numberOfEvents}
           onChange={this.handleInputChanged}
         />
-        <ErrorAlert text={this.state.errorText} />
       </div>
     );
   }; 
