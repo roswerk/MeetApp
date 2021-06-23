@@ -22,17 +22,18 @@
   width: 184px;
   height: 42px;
   margin: 1rem;
-  background-color: #4285f4;
+  background-color: grey;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 grey;
 }
 
 .google-btn:hover {
-  box-shadow: 0 0 6px #4285f4;
+  box-shadow: 0 0 6px rgb(197, 236, 125);
 }
 
+
 .google-btn:active {
-  background: #1669f2;
+  background: rgb(197, 236, 125);
 }
 
 .google-icon-wrapper {
@@ -59,11 +60,20 @@
   font-size: 14px;
   letter-spacing: 0.2px;
   font-family: "Roboto";
-  background-color: #4285f4;
+  background-color: rgb(144, 211, 19);
+  /* background-color: rgb(197, 236, 125); */
   width: 80%;
   height: 100%;
   text-align: center;
+  border-radius: 5px;
 }
+
+
+
+.bottomPart {
+  margin-top: 10%;
+}
+
 
 .WelcomeMessage {
   margin-top: 20%;
