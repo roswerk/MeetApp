@@ -10,6 +10,7 @@ import WelcomeScreen from './WelcomeScreen';
 // import { toThrowErrorMatchingInlineSnapshot } from 'jest-snapshot';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import EventGenre from "./EventGenre"
+import Navbar from "./Navbar";
 
 
 class App extends Component{
@@ -119,12 +120,13 @@ class App extends Component{
     return (
       <div className="App">
       <div>
-      <h1 className="welcome-title">Welcome to MeetApp</h1>
-      <p>The only place to get the information you need about Events in your city</p>
+        <Navbar/>
+      {/* <h1 className="welcome-title">MeetApp</h1> */}
+      {/* <p>The only place to get the information you need about Events in your city</p> */}
       <OfflineAlert text={this.state.offlineText} />
       </div>  
 
-      <h4>Events in each city</h4>
+      {/* <h4>Events in each city</h4> */}
       <div className="wrapper">
       <div className="data-vis-wrapper">
       
