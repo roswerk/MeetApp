@@ -1,4 +1,4 @@
-.welcome-title {
+.welcomeTitle {
   color: rgb(197, 236, 125);
   font-weight: bold;
 }
@@ -8,4 +8,8 @@
   margin-top: -2%;
   text-align: left;
   margin-bottom: -5%;
+}
+
+.welcomeParag {
+  margin-top: -20px;
 }
