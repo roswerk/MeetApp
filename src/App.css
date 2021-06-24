@@ -141,6 +141,9 @@ input[type="number"] {
 
 .Alert-text {
   padding-left: 20px;
+  text-align: center;
+  margin-left: 500px;
+  width: 400px;
 }
 
 /* .data-vis-wrapper {
