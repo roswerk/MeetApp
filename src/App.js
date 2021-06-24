@@ -114,19 +114,16 @@ class App extends Component{
   render(){
     const {locations, numberOfEvents, events} = this.state;
 
-    // if (this.state.showWelcomeScreen === undefined) return <div
-    // className="App" />
+    if (this.state.showWelcomeScreen === undefined) return <div
+    className="App" />
 
     return (
       <div className="App">
       <div>
       <Navbar/>
-      {/* <h1 className="welcome-title">MeetApp</h1> */}
-      {/* <p>The only place to get the information you need about Events in your city</p> */}
       <OfflineAlert text={this.state.offlineText} />
       </div>  
 
-      {/* <h4>Events in each city</h4> */}
       <div className="wrapper">
       <div className="data-vis-wrapper">
       
@@ -160,7 +157,7 @@ class App extends Component{
       </div>
 
       </div>
-      {/* <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> */}
+      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       <footer>MeetApp 2021</footer>
       </div>
     );
