@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {ErrorAlert} from "./Alert";
-import "./NumberOfEvents.css";
 
 class NumberOfEvents extends Component {
   state = {
