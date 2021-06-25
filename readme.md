@@ -1,5 +1,5 @@
 # Serverless MeetApp
-This project is a Progressive Web Application with a serverless google authentification.
+This project is a Progressive Web Application (PWA) build with React, using a Test Driven Development approach (TDD) with a serverless google authentification.
 
 ## Technologies used:
 <p>
