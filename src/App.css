@@ -122,45 +122,6 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
-.button-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
-.Alert {
-  top: 20px;
-  text-align: left;
-  margin-left: 25px;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  margin-top: 3%;
-}
-
-.Alert-text {
-  padding-left: 20px;
-  text-align: center;
-  margin-left: 500px;
-  width: 400px;
-}
-
-/* .data-vis-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.data-vis-wrapper .recharts-responsive-container {
-  min-width: 100%;
-  display: flex;
-} */
-
-.recharts-surface {
-  overflow: visible;
-}
-
 .login-button {
   color: #494949;
   text-transform: uppercase;
@@ -179,6 +140,7 @@ input[type="number"] {
   color: black;
 }
 
+/* Start of Google WelcomePage Button */
 .google-btn {
   width: 184px;
   height: 42px;
@@ -223,67 +185,64 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
-
-
-/* @media only screen and (min-width: 992px) {
-  .data-vis-wrapper {
-    flex-direction: row;
-  }
-
-  .data-vis-wrapper .recharts-responsive-container {
-    flex-basis: 50%;
-    max-width: 50%;
-    min-width: auto;
-    margin: 0 auto;
-  }
-} */
-
+/* End of Google WelcomePage Button */
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 2;
 }
 
 .eventList {
-  display: grid;
-  grid-template-rows: 200px;
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  width: 80%;
+  margin-top: 5%;
 }
 
-
 .eventCommands {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 20px;
-  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+
 }
 
 .CitySearch {
   display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
-  max-width: 300px;
-  margin: auto;
-  position: relative;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .numberOfEvents {
-  display: grid;
-  grid-template-columns: 25px 150px 150px 70px;
-  margin-bottom: 5px;
-}
-
-.numberOfEventsLabel {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  width: 150px;
-  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  flex: 0.5 0.5 0.5;
+  align-items: flex-end;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .event-number-input {
-  width: 70px;
+  width: 50px;
 }
 
 .data-vis-wrapper {
-  display: grid;
-  grid-template-rows: repeat(2, 2fr);
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  flex: 0.5;
+  width: 100%;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
 }
