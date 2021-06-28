@@ -157,7 +157,7 @@ class App extends Component{
       </div>
 
       </div>
-      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
+      {/* <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> */}
       <footer>MeetApp 2021</footer>
       </div>
     );
