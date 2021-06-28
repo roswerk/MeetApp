@@ -51,7 +51,6 @@ input[type="number"] {
 
 .suggestions {
   width: 250px;
-  position: absolute;
   z-index: 2;
   align-self: center;
   margin: 0;
@@ -198,7 +197,7 @@ input[type="number"] {
 .eventList {
   display: flex;
   flex-direction: column;
-  flex: 0.5;
+  flex: 0.7;
   width: 80%;
   margin-top: 5%;
 }
@@ -208,13 +207,13 @@ input[type="number"] {
   flex-direction: row;
   flex: 1;
   align-items: flex-end;
-
+  justify-content: space-between;
 }
 
 .CitySearch {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  flex: 0.5;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -226,18 +225,19 @@ input[type="number"] {
   align-items: flex-end;
   align-items: center;
   margin-left: 10px;
+  margin-bottom: 17px;
 }
 
 .event-number-input {
   width: 50px;
+  margin-left: 5px;
 }
 
 .data-vis-wrapper {
   display: flex;
   flex-direction: row; 
   flex-wrap: wrap; 
-  flex: 0.5;
-  width: 100%;
+  flex: 0.4;
 }
 
 footer{
@@ -245,4 +245,12 @@ footer{
   flex-direction: column;
   align-items: center;
   margin-top: 5px;
+}
+
+.Alert-text {
+margin-top: 70px;
+}
+
+.recharts-surface {
+  overflow: visible;
 }
