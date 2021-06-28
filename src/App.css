@@ -8,6 +8,9 @@
 
 .App * {
   box-sizing: border-box;
+}
+
+p, label, footer, h1, h2, h3, a{
   color: white;
 }
 
@@ -253,4 +256,8 @@ margin-top: 70px;
 
 .recharts-surface {
   overflow: visible;
+}
+
+#recharts-responsive-container{
+  text-align: left;
 }
