@@ -112,10 +112,6 @@ class App extends Component{
 
 
   render(){
-    const {locations, numberOfEvents, events} = this.state;
-
-    // if (this.state.showWelcomeScreen === undefined) return <div
-    // className="App" />
 
     return (
       <div className="App">
@@ -126,22 +122,17 @@ class App extends Component{
 
       <div className="wrapper">
       <div className="data-vis-wrapper">
-      
-      
-      <ResponsiveContainer height={300}>
-      <EventGenre events={events} />
-      </ResponsiveContainer>
-      
+    
+      <EventGenre events={this.state.events} height={300}/>
 
-      
-      <ResponsiveContainer height={300}>
+      <ResponsiveContainer height={300} id="recharts-responsive-container">
         
       <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-      <CartesianGrid />
-      <XAxis dataKey="city" type="category" name="city" />
-      <YAxis dataKey="number" type="number" name="number of events" allowDecimals={false}/>
+      <CartesianGrid strokeDasharray="3 3"/>
+      <XAxis dataKey="city" type="category" name="City"/>
+      <YAxis dataKey="number" type="number" name="Number of events" allowDecimals={false}/>
       
-      <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+      <Tooltip cursor={{ strokeDasharray: '3 3' }}/>
       <Legend />
       <Scatter data={this.getData()} fill="#8884d8" />
       </ScatterChart>
@@ -150,14 +141,14 @@ class App extends Component{
 
       <div className="eventList">
       <div className="eventCommands">
-      <CitySearch locations={locations} updateEvents={this.updateEvents} />
-      <NumberOfEvents numberOfEvents={numberOfEvents} updateEvents={this.updateEvents} />
+      <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+      <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents} />
       </div>
       <EventList events={this.state.events} />
       </div>
 
       </div>
-      {/* <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> */}
+      <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       <footer>MeetApp 2021</footer>
       </div>
     );
