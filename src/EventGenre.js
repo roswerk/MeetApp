@@ -15,12 +15,13 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
     
   const genres = ["React", "JavaScript", "Node", "jQuery", "AngularJs"];
 
-  const data = genres.map((genre) => {
+  let data = genres.map((genre) => {
 
     const value = events.filter(({summary}) => 
       summary.split(" ").includes(genre)).length
   return {name: genre, value};
   })
+  data = data.filter(data => data.value)
 return data;
 }
 
